@@ -193,7 +193,7 @@ export const plans: Plan[] = [
     ...neonPlan,
     label: 'MODEL 03',
     name: 'PLIMAP Plus',
-    price: '₩0,000',
+    price: '₩4,900',
     unit: '/ 월',
     desc: '더 넓게, 더 깊게 탐색하는 구독 플랜',
     items: [

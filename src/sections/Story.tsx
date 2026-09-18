@@ -1,7 +1,10 @@
+import { Headphones, MapPin, Footprints } from 'lucide-react';
 import { stats, problems } from '../data';
 import { Eyebrow } from '../components/Eyebrow';
 import { Heading } from '../components/Heading';
 import { Panel } from '../components/Panel';
+
+const statIcons = [Headphones, MapPin, Footprints];
 
 export function Story() {
   return (
@@ -13,14 +16,30 @@ export function Story() {
         <Heading style={{ lineHeight: 1.25 }}>20대는 장소와 음악을 함께 경험하고 싶어해요</Heading>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
-        {stats.map((s) => (
-          <Panel key={s.label} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: 28 }}>
-            <span style={{ fontSize: 48, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: '#c8f940' }}>
-              {s.value}
-            </span>
-            <span style={{ fontSize: 15, lineHeight: 1.55, color: 'rgba(253,253,253,0.75)' }}>{s.label}</span>
-          </Panel>
-        ))}
+        {stats.map((s, i) => {
+          const Icon = statIcons[i];
+          return (
+            <Panel key={s.label} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: 28 }}>
+              <span
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: '50%',
+                  background: 'rgba(200,249,64,0.1)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Icon size={20} color="#c8f940" />
+              </span>
+              <span style={{ fontSize: 48, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: '#c8f940' }}>
+                {s.value}
+              </span>
+              <span style={{ fontSize: 15, lineHeight: 1.55, color: 'rgba(253,253,253,0.75)' }}>{s.label}</span>
+            </Panel>
+          );
+        })}
       </div>
 
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 24 }}>
