@@ -30,12 +30,10 @@ export function Story() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
         {problems.map((p) => (
           <Panel key={p.n} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 18, padding: 28 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 12, color: 'rgba(253,253,253,0.5)' }}>
-              <span style={{ width: 8, height: 8, borderRadius: 2, background: 'rgba(200,249,64,0.3)' }} />
-              {p.n} · {p.ref}
-            </div>
+            <span style={{ fontSize: 20, color: 'rgba(200,249,64,0.7)' }}>{p.n}</span>
             <h3 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: '#fdfdfd' }}>{p.title}</h3>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: 'rgba(253,253,253,0.72)' }}>{p.problem}</p>
+            <p style={{ margin: 0, fontSize: 13, lineHeight: 1.5, color: '#c8f940' }}>{p.stat}</p>
             <div style={{ height: 1, background: 'linear-gradient(90deg, #c8f940, transparent)' }} />
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 12, color: '#c8f940' }}>
               <span style={{ width: 8, height: 8, borderRadius: 2, background: '#c8f940' }} />

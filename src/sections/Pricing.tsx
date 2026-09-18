@@ -76,6 +76,9 @@ export function Pricing() {
           </div>
         ))}
       </div>
+      <p style={{ margin: 0, fontSize: 13, textAlign: 'center', color: 'rgba(253,253,253,0.5)' }}>
+        그 외 구글 애드센스 등 광고 수익도 함께 운영해요.
+      </p>
     </section>
   );
 }
