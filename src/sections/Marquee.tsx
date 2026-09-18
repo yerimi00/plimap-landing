@@ -5,8 +5,6 @@ export function Marquee() {
     <div
       style={{
         overflow: 'hidden',
-        borderTop: '1px solid rgba(200,249,64,0.12)',
-        borderBottom: '1px solid rgba(200,249,64,0.12)',
         padding: '16px 0',
       }}
     >

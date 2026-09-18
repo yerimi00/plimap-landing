@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <div style={{ width: '100%', minHeight: '100vh', background: '#0c0d0f', display: 'flex', justifyContent: 'center' }}>
-      <div style={{ width: 900, maxWidth: '100%', display: 'flex', flexDirection: 'column', position: 'relative' }}>
+      <div style={{ width: '80%', maxWidth: '100%', display: 'flex', flexDirection: 'column', position: 'relative' }}>
         <Nav />
         <Intro />
         <Marquee />
