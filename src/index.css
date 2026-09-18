@@ -1,0 +1,79 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: #0c0d0f;
+  color: #fdfdfd;
+  font-family: Pretendard, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #c8f940;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fdfdfd;
+}
+
+button {
+  font: inherit;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+[data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+
+.btn-neon:hover {
+  background: #fcff98 !important;
+  color: #0c0d0f !important;
+}
+
+@media (max-width: 640px) {
+  nav {
+    padding: 12px 16px !important;
+  }
+  nav > div:nth-of-type(2) {
+    display: none !important;
+  }
+  section {
+    padding: 64px 20px !important;
+  }
+  h1 {
+    font-size: 20px !important;
+    gap: 8px !important;
+  }
+  h2 {
+    font-size: 28px !important;
+  }
+  #cta h2 {
+    font-size: 32px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+  .combo-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .axes-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
