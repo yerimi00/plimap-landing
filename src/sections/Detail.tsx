@@ -23,7 +23,7 @@ export function Detail() {
         </Heading>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 80 }}>
-        {features.map((f) => (
+        {features.map((f, i) => (
           <div
             key={f.n}
             data-reveal
@@ -58,9 +58,10 @@ export function Detail() {
               style={{
                 order: f.imgOrder,
                 margin: '0 auto',
-                width: '100%',
+                width: i === 0 ? 'auto' : '100%',
                 maxWidth: 420,
                 height: 'auto',
+                maxHeight: i === 0 ? 500 : undefined,
                 borderRadius: 32,
                 border: '1px solid rgba(200,249,64,0.28)',
                 boxShadow: '0 0 60px rgba(200,249,64,0.1)',
