@@ -24,35 +24,12 @@ export function Product() {
           여정 지도가 되는 경험을 제공해요.
         </p>
       </div>
-      <Panel
-        radius={24}
+      <img
         data-reveal
-        className="combo-grid"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr auto 1fr auto 1fr',
-          gap: 16,
-          alignItems: 'center',
-          padding: '36px 28px',
-        }}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, textAlign: 'center' }}>
-          <div style={{ width: 56, height: 56, borderRadius: '50% 50% 50% 50% / 40% 40% 60% 60%', background: '#c8f940' }} />
-          <span style={{ fontSize: 15, color: 'rgba(253,253,253,0.8)' }}>원하는 장소에</span>
-        </div>
-        <span style={{ fontSize: 28, color: 'rgba(253,253,253,0.4)' }}>+</span>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, textAlign: 'center' }}>
-          <div style={{ width: 56, height: 56, borderRadius: '50%', border: '3px solid #fdfdfd' }} />
-          <span style={{ fontSize: 15, color: 'rgba(253,253,253,0.8)' }}>음악을 남겨서</span>
-        </div>
-        <span style={{ fontSize: 28, color: 'rgba(253,253,253,0.4)' }}>=</span>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, textAlign: 'center' }}>
-          <img src="/uploads/logo.png" alt="PLIMAP" style={{ width: 56, height: 56, borderRadius: 14 }} />
-          <span style={{ fontSize: 15, color: 'rgba(253,253,253,0.8)' }}>
-            나만의 <b style={{ color: '#c8f940' }}>플레이리스트</b>를
-          </span>
-        </div>
-      </Panel>
+        src="/uploads/cropped/logo-mean.png"
+        alt="원하는 장소에 + 음악을 남겨서 = 나만의 플레이리스트를"
+        style={{ width: '100%', borderRadius: 24, height: 'auto' }}
+      />
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
         {goals.map((g) => (
           <Panel key={g.hi} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 28 }}>

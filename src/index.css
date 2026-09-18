@@ -75,9 +75,6 @@ section {
   h3 {
     font-size: 20px !important;
   }
-  .combo-grid {
-    grid-template-columns: 1fr !important;
-  }
   .axes-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
