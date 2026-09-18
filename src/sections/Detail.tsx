@@ -52,26 +52,20 @@ export function Detail() {
                 ))}
               </div>
             </div>
-            <div
+            <img
+              src={f.img}
+              alt={`${f.eyebrow} 화면`}
               style={{
                 order: f.imgOrder,
-                aspectRatio: '9/16',
-                maxHeight: 440,
                 margin: '0 auto',
                 width: '100%',
-                maxWidth: 260,
+                maxWidth: 420,
+                height: 'auto',
                 borderRadius: 32,
                 border: '1px solid rgba(200,249,64,0.28)',
-                background: '#0c0d0f',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
                 boxShadow: '0 0 60px rgba(200,249,64,0.1)',
-                overflow: 'hidden',
               }}
-            >
-              <img src={f.img} alt={`${f.eyebrow} 화면`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
+            />
           </div>
         ))}
       </div>
