@@ -24,7 +24,7 @@ export function Intro() {
         }}
       />
 
-      <div style={{ fontSize: 12, letterSpacing: '0.08em', color: 'rgba(253,253,253,0.45)' }}>2026. 09. 18</div>
+      <div style={{ fontSize: 12, letterSpacing: '0.08em', color: 'rgba(253,253,253,0.45)' }}> </div>
 
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 40 }}>
         <div data-reveal style={{ flex: '1 1 360px', display: 'flex', flexDirection: 'column', gap: 24, textAlign: 'left' }}><h1

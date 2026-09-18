@@ -1,7 +1,7 @@
 import { useReveal } from './hooks/useReveal';
 import { Nav } from './sections/Nav';
 import { Intro } from './sections/Intro';
-import { Marquee } from './sections/Marquee';
+// import { Marquee } from './sections/Marquee';
 import { Story } from './sections/Story';
 import { Product } from './sections/Product';
 import { Strength } from './sections/Strength';
@@ -19,7 +19,7 @@ export default function App() {
       <div style={{ width: '80%', maxWidth: '100%', display: 'flex', flexDirection: 'column', position: 'relative' }}>
         <Nav />
         <Intro />
-        <Marquee />
+        {/* <Marquee /> */}
         <Story />
         <Product />
         <Strength />
