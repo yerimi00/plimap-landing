@@ -2,6 +2,7 @@ import { useReveal } from './hooks/useReveal';
 import { Nav } from './sections/Nav';
 import { Intro } from './sections/Intro';
 // import { Marquee } from './sections/Marquee';
+import { StoryIntro } from './sections/StoryIntro';
 import { Story } from './sections/Story';
 import { Product } from './sections/Product';
 import { Strength } from './sections/Strength';
@@ -20,6 +21,7 @@ export default function App() {
         <Nav />
         <Intro />
         {/* <Marquee /> */}
+        <StoryIntro />
         <Story />
         <Product />
         <Strength />
