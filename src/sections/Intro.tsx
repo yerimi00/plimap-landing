@@ -9,7 +9,6 @@ export function Intro() {
         gap: 40,
         position: 'relative',
         overflow: 'hidden',
-        backgroundImage: 'repeating-linear-gradient(90deg, rgba(200,249,64,0.05) 0 2px, transparent 2px 18px)',
       }}
     >
       <div
