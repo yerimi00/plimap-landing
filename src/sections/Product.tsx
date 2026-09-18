@@ -1,4 +1,7 @@
 import { goals } from '../data';
+import { Eyebrow } from '../components/Eyebrow';
+import { Heading } from '../components/Heading';
+import { Panel } from '../components/Panel';
 
 export function Product() {
   return (
@@ -13,24 +16,14 @@ export function Product() {
       }}
     >
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 14 }}>
-        <span style={{ fontSize: 12, color: '#c8f940', letterSpacing: '0.08em' }}>03 — SERVICE CONCEPT</span>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: 40,
-            lineHeight: 1.2,
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            color: '#fdfdfd',
-          }}
-        >
-          플레이리스트(Playlist)와 지도(Map)의 만남
-        </h2>
+        <Eyebrow>03 — SERVICE CONCEPT</Eyebrow>
+        <Heading>플레이리스트(Playlist)와 지도(Map)의 만남</Heading>
         <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: 'rgba(253,253,253,0.7)', maxWidth: 560 }}>
           지도 위에 펼쳐지는 당신의 음악 취향과 감성을 자유롭게 공유해 보세요.
         </p>
       </div>
-      <div
+      <Panel
+        radius={24}
         data-reveal
         className="combo-grid"
         style={{
@@ -39,9 +32,6 @@ export function Product() {
           gap: 16,
           alignItems: 'center',
           padding: '36px 28px',
-          borderRadius: 24,
-          border: '1px solid rgba(200,249,64,0.12)',
-          background: 'rgba(200,249,64,0.03)',
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, textAlign: 'center' }}>
@@ -60,22 +50,10 @@ export function Product() {
             나만의 <b style={{ color: '#c8f940' }}>플레이리스트</b>를
           </span>
         </div>
-      </div>
+      </Panel>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
         {goals.map((g) => (
-          <div
-            key={g.hi}
-            data-reveal
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 16,
-              padding: 28,
-              borderRadius: 16,
-              border: '1px solid rgba(200,249,64,0.12)',
-              background: 'rgba(200,249,64,0.03)',
-            }}
-          >
+          <Panel key={g.hi} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 28 }}>
             <div
               style={{
                 aspectRatio: '1',
@@ -93,7 +71,7 @@ export function Product() {
               <span style={{ color: '#c8f940' }}>{g.hi}</span>
               {g.rest}
             </p>
-          </div>
+          </Panel>
         ))}
       </div>
     </section>

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { reviews, faqData } from '../data';
+import { Eyebrow } from '../components/Eyebrow';
+import { Heading } from '../components/Heading';
+import { Panel } from '../components/Panel';
 
 export function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -16,35 +19,12 @@ export function Faq() {
       }}
     >
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 14, maxWidth: 620 }}>
-        <span style={{ fontSize: 12, color: '#c8f940', letterSpacing: '0.08em' }}>06 — REVIEW &amp; Q&amp;A</span>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: 40,
-            lineHeight: 1.2,
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            color: '#fdfdfd',
-          }}
-        >
-          먼저 써본 사람들의 이야기
-        </h2>
+        <Eyebrow>06 — REVIEW &amp; Q&amp;A</Eyebrow>
+        <Heading>먼저 써본 사람들의 이야기</Heading>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
         {reviews.map((r) => (
-          <div
-            key={r.name + r.quote}
-            data-reveal
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 16,
-              padding: 28,
-              borderRadius: 16,
-              border: '1px solid rgba(200,249,64,0.12)',
-              background: 'rgba(200,249,64,0.03)',
-            }}
-          >
+          <Panel key={r.name + r.quote} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 28 }}>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.65, color: '#fdfdfd' }}>“{r.quote}”</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 'auto' }}>
               <span style={{ width: 32, height: 32, borderRadius: '50%', background: 'rgba(200,249,64,0.15)' }} />
@@ -53,23 +33,14 @@ export function Faq() {
                 <span style={{ fontSize: 12, color: 'rgba(253,253,253,0.55)' }}>{r.meta}</span>
               </div>
             </div>
-          </div>
+          </Panel>
         ))}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {faqData.map((q, i) => {
           const open = openIndex === i;
           return (
-            <div
-              key={q.q}
-              data-reveal
-              style={{
-                border: '1px solid rgba(200,249,64,0.12)',
-                borderRadius: 16,
-                background: 'rgba(200,249,64,0.03)',
-                overflow: 'hidden',
-              }}
-            >
+            <Panel key={q.q} data-reveal style={{ overflow: 'hidden' }}>
               <button
                 onClick={() => setOpenIndex(open ? -1 : i)}
                 style={{
@@ -96,7 +67,7 @@ export function Faq() {
                   {q.a}
                 </p>
               )}
-            </div>
+            </Panel>
           );
         })}
       </div>

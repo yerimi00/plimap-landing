@@ -1,3 +1,5 @@
+import { NeonButton } from '../components/NeonButton';
+
 export function Nav() {
   return (
     <nav
@@ -30,21 +32,7 @@ export function Nav() {
         <a href="#pricing" style={{ color: 'inherit' }}>수익화</a>
         <a href="#faq" style={{ color: 'inherit' }}>Q&amp;A</a>
       </div>
-      <a
-        href="#cta"
-        className="btn-neon"
-        style={{
-          padding: '10px 18px',
-          background: 'linear-gradient(180deg,#c8f940,#fcff98)',
-          color: '#0c0d0f',
-          borderRadius: 999,
-          fontSize: 13,
-          fontWeight: 600,
-          boxShadow: '0 3px 8px rgba(0,0,0,0.7)',
-        }}
-      >
-        시작하기
-      </a>
+      <NeonButton href="#cta" size="sm">시작하기</NeonButton>
     </nav>
   );
 }

@@ -1,4 +1,6 @@
 import { plans } from '../data';
+import { Eyebrow } from '../components/Eyebrow';
+import { Heading } from '../components/Heading';
 
 export function Pricing() {
   return (
@@ -13,19 +15,8 @@ export function Pricing() {
       }}
     >
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'center', textAlign: 'center' }}>
-        <span style={{ fontSize: 12, color: '#c8f940', letterSpacing: '0.08em' }}>MONETIZATION</span>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: 40,
-            lineHeight: 1.2,
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            color: '#fdfdfd',
-          }}
-        >
-          수익 모델
-        </h2>
+        <Eyebrow>MONETIZATION</Eyebrow>
+        <Heading>수익 모델</Heading>
         <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: 'rgba(253,253,253,0.7)', maxWidth: 560 }}>
           국내 로컬 마케팅 시장 15조원+. 장소 기반 콘텐츠의 경제적 가치를 수익으로 연결합니다.
         </p>

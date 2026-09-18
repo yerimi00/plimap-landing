@@ -1,4 +1,7 @@
 import { features } from '../data';
+import { Eyebrow } from '../components/Eyebrow';
+import { Heading } from '../components/Heading';
+import { Tag } from '../components/Tag';
 
 export function Detail() {
   return (
@@ -13,20 +16,11 @@ export function Detail() {
       }}
     >
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 14, maxWidth: 620 }}>
-        <span style={{ fontSize: 12, color: '#c8f940', letterSpacing: '0.08em' }}>05 — FEATURES</span>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: 40,
-            lineHeight: 1.2,
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            color: '#fdfdfd',
-          }}
-        >
+        <Eyebrow>05 — FEATURES</Eyebrow>
+        <Heading>
           사람들의 감정을 담아
           <br />장소에 노래를 가볍게 남기는 기능
-        </h2>
+        </Heading>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 80 }}>
         {features.map((f) => (
@@ -54,21 +48,7 @@ export function Detail() {
               <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: 'rgba(253,253,253,0.7)' }}>{f.desc}</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {f.tags.map((t) => (
-                  <span
-                    key={t}
-                    style={{
-                      padding: '5px 12px',
-                      borderRadius: 999,
-                      border: '1px solid #6d794d',
-                      background: '#c8f94014',
-                      fontSize: 12,
-                      color: '#efefef',
-                      whiteSpace: 'nowrap',
-                      flex: 'none',
-                    }}
-                  >
-                    {t}
-                  </span>
+                  <Tag key={t}>{t}</Tag>
                 ))}
               </div>
             </div>

@@ -1,4 +1,7 @@
 import { stats, problems } from '../data';
+import { Eyebrow } from '../components/Eyebrow';
+import { Heading } from '../components/Heading';
+import { Panel } from '../components/Panel';
 
 export function Story() {
   return (
@@ -7,7 +10,7 @@ export function Story() {
       style={{ padding: '112px 24px', display: 'flex', flexDirection: 'column', gap: 56 }}
     >
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 20 }}>
-        <span style={{ fontSize: 12, color: '#c8f940', letterSpacing: '0.08em' }}>02 — BACKGROUND</span>
+        <Eyebrow>02 — BACKGROUND</Eyebrow>
         <div
           style={{
             padding: '22px 36px',
@@ -28,75 +31,27 @@ export function Story() {
       </div>
 
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-        <span style={{ fontSize: 12, color: 'rgba(253,253,253,0.5)', letterSpacing: '0.08em' }}>
-          USER RESEARCH · 20대 72명
-        </span>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: 40,
-            lineHeight: 1.25,
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            color: '#fdfdfd',
-          }}
-        >
-          20대는 장소와 음악을 함께 경험하고 싶어해요
-        </h2>
+        <Eyebrow color="muted">USER RESEARCH · 20대 72명</Eyebrow>
+        <Heading style={{ lineHeight: 1.25 }}>20대는 장소와 음악을 함께 경험하고 싶어해요</Heading>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
         {stats.map((s) => (
-          <div
-            key={s.label}
-            data-reveal
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 12,
-              padding: 28,
-              borderRadius: 16,
-              border: '1px solid rgba(200,249,64,0.12)',
-              background: 'rgba(200,249,64,0.03)',
-            }}
-          >
+          <Panel key={s.label} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: 28 }}>
             <span style={{ fontSize: 48, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: '#c8f940' }}>
               {s.value}
             </span>
             <span style={{ fontSize: 15, lineHeight: 1.55, color: 'rgba(253,253,253,0.75)' }}>{s.label}</span>
-          </div>
+          </Panel>
         ))}
       </div>
 
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 24 }}>
-        <span style={{ fontSize: 12, color: 'rgba(253,253,253,0.5)', letterSpacing: '0.08em' }}>PAIN POINTS</span>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: 40,
-            lineHeight: 1.25,
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            color: '#fdfdfd',
-          }}
-        >
-          하지만 기존 서비스에는 한계가 있었어요
-        </h2>
+        <Eyebrow color="muted">PAIN POINTS</Eyebrow>
+        <Heading style={{ lineHeight: 1.25 }}>하지만 기존 서비스에는 한계가 있었어요</Heading>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
         {problems.map((p) => (
-          <div
-            key={p.n}
-            data-reveal
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 18,
-              padding: 28,
-              borderRadius: 16,
-              border: '1px solid rgba(200,249,64,0.12)',
-              background: 'rgba(200,249,64,0.03)',
-            }}
-          >
+          <Panel key={p.n} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 18, padding: 28 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 12, color: 'rgba(253,253,253,0.5)' }}>
               <span style={{ width: 8, height: 8, borderRadius: 2, background: 'rgba(200,249,64,0.3)' }} />
               {p.n} · {p.ref}
@@ -109,7 +64,7 @@ export function Story() {
               PLIMAP
             </div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 500, color: '#fdfdfd' }}>{p.solution}</p>
-          </div>
+          </Panel>
         ))}
       </div>
       <div

@@ -1,4 +1,7 @@
 import { strengths, axes } from '../data';
+import { Eyebrow } from '../components/Eyebrow';
+import { Heading } from '../components/Heading';
+import { Panel } from '../components/Panel';
 
 export function Strength() {
   return (
@@ -13,20 +16,11 @@ export function Strength() {
       }}
     >
       <div data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 14, maxWidth: 640 }}>
-        <span style={{ fontSize: 12, color: '#c8f940', letterSpacing: '0.08em' }}>04 — WHY PLIMAP</span>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: 40,
-            lineHeight: 1.2,
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            color: '#fdfdfd',
-          }}
-        >
+        <Eyebrow>04 — WHY PLIMAP</Eyebrow>
+        <Heading>
           장소에서 발견하고,
           <br />함께 채워가는 음악 경험을 한 번에
-        </h2>
+        </Heading>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
         {strengths.map((s) => (
@@ -58,19 +52,8 @@ export function Strength() {
           </div>
         ))}
       </div>
-      <div
-        data-reveal
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 20,
-          padding: 32,
-          borderRadius: 24,
-          border: '1px solid rgba(200,249,64,0.12)',
-          background: 'rgba(200,249,64,0.03)',
-        }}
-      >
-        <span style={{ fontSize: 12, color: 'rgba(253,253,253,0.5)', letterSpacing: '0.08em' }}>POSITIONING</span>
+      <Panel radius={24} data-reveal style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 32 }}>
+        <Eyebrow color="muted">POSITIONING</Eyebrow>
         <p style={{ margin: 0, fontSize: 20, fontWeight: 600, lineHeight: 1.5, color: '#fdfdfd' }}>
           장소에 음악을 남기는 경험을 통해 지도 · 음악 · SNS 사이의 비어 있던 영역을 채워요
         </p>
@@ -93,7 +76,7 @@ export function Strength() {
             </div>
           ))}
         </div>
-      </div>
+      </Panel>
     </section>
   );
 }

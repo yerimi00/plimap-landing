@@ -1,4 +1,5 @@
 import { bars } from '../data';
+import { NeonButton } from '../components/NeonButton';
 
 export function Cta() {
   return (
@@ -51,36 +52,8 @@ export function Cta() {
         반경 500m 안의 음악 지도가 당신을 기다리고 있어요.
       </p>
       <div data-reveal style={{ display: 'flex', gap: 12 }}>
-        <a
-          href="#"
-          className="btn-neon"
-          style={{
-            padding: '14px 28px',
-            background: 'linear-gradient(180deg,#c8f940,#fcff98)',
-            color: '#0c0d0f',
-            borderRadius: 999,
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 3px 8px rgba(0,0,0,0.7)',
-          }}
-        >
-          App Store
-        </a>
-        <a
-          href="#"
-          className="btn-neon"
-          style={{
-            padding: '14px 28px',
-            background: 'linear-gradient(180deg,#c8f940,#fcff98)',
-            color: '#0c0d0f',
-            borderRadius: 999,
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 3px 8px rgba(0,0,0,0.7)',
-          }}
-        >
-          Google Play
-        </a>
+        <NeonButton href="#">App Store</NeonButton>
+        <NeonButton href="#">Google Play</NeonButton>
       </div>
     </section>
   );
